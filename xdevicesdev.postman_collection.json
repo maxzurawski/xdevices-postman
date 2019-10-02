@@ -1,0 +1,470 @@
+{
+	"info": {
+		"_postman_id": "25c316a0-2dbc-4a49-8233-a4cb89dbb859",
+		"name": "xdevicesdev",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "eureka",
+			"item": [
+				{
+					"name": "proxy registartion ticket in json",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://xdevicesdev.home:8761/eureka/apps/proxy",
+							"protocol": "http",
+							"host": [
+								"xdevicesdev",
+								"home"
+							],
+							"port": "8761",
+							"path": [
+								"eureka",
+								"apps",
+								"proxy"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "dispatcher",
+			"item": [
+				{
+					"name": "ping",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://xdevicesdev.home:8000/api/dispatcher/ping",
+							"protocol": "http",
+							"host": [
+								"xdevicesdev",
+								"home"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"dispatcher",
+								"ping"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "sensortypes",
+			"item": [
+				{
+					"name": "Save",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"First sensortype\",\n\t\"type\":\"FIRST_SENSORTYPE\",\n\t\"topic\":\"FIRST_SENSORTYPE_TOPIC\",\n\t\"description\":\"Test description\"\n}"
+						},
+						"url": {
+							"raw": "http://xdevicesdev.home:8000/api/sensortypes/new",
+							"protocol": "http",
+							"host": [
+								"xdevicesdev",
+								"home"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"sensortypes",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAll Sensortypes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://xdevicesdev.home:8000/api/sensortypes/",
+							"protocol": "http",
+							"host": [
+								"xdevicesdev",
+								"home"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"sensortypes",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://xdevicesdev.home:8000/api/sensortypes/",
+							"protocol": "http",
+							"host": [
+								"xdevicesdev",
+								"home"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"sensortypes",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Save Temperature",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"Temperature sensor\",\n\t\"type\":\"TEMPERATURE\",\n\t\"topic\":\"TEMPERATURE_TOPIC\",\n\t\"description\":\"Sample temperature sensor type\"\n}"
+						},
+						"url": {
+							"raw": "http://xdevicesdev.home:8000/api/sensortypes/new",
+							"protocol": "http",
+							"host": [
+								"xdevicesdev",
+								"home"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"sensortypes",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://xdevicesdev.home:8000/api/sensortypes/1",
+							"protocol": "http",
+							"host": [
+								"xdevicesdev",
+								"home"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"sensortypes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "register",
+			"item": [
+				{
+					"name": "attributes",
+					"item": [
+						{
+							"name": "get all attributes",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://xdevicesdev.home:8000/api/register/attributes/",
+									"protocol": "http",
+									"host": [
+										"xdevicesdev",
+										"home"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"register",
+										"attributes",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get attribute by symbol",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://xdevicesdev.home:8000/api/register/attributes/ACCEPTABLE_MIN",
+									"protocol": "http",
+									"host": [
+										"xdevicesdev",
+										"home"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"register",
+										"attributes",
+										"ACCEPTABLE_MIN"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update attribute",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"symbol\": \"ACCEPTABLE_MIN\",\n    \"name\": \"Acceptable minimum value - updated\",\n    \"description\": \"Minimum value acceptable, before notification happens\",\n    \"inputtype\": \"numeric\"\n}"
+								},
+								"url": {
+									"raw": "http://xdevicesdev.home:8000/api/register/attributes/ACCEPTABLE_MIN",
+									"protocol": "http",
+									"host": [
+										"xdevicesdev",
+										"home"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"register",
+										"attributes",
+										"ACCEPTABLE_MIN"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update attribute failure",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"symbol\": \"FREQUENCY_OF_REPORT\",\n    \"name\": \"Frequency of report\",\n    \"description\": \"Interval within which sensor should report it's measurements\",\n    \"inputtype\": \"numeric\"\n}"
+								},
+								"url": {
+									"raw": "http://xdevicesdev.home:8000/api/register/attributes/FREQUENCY_OF_REPORT",
+									"protocol": "http",
+									"host": [
+										"xdevicesdev",
+										"home"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"register",
+										"attributes",
+										"FREQUENCY_OF_REPORT"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "sensors",
+					"item": [
+						{
+							"name": "get all sensors",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://xdevicesdev.home:8000/api/register/sensors/",
+									"protocol": "http",
+									"host": [
+										"xdevicesdev",
+										"home"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"register",
+										"sensors",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "save sensor",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\":\"dummy sensor\",\n\t\"description\":\"dummy sensor description\",\n\t\"type\":\"TEMPERATURE\",\n\t\"uuid\": \"81750491-88dd-410e-b53f-1666786cd721\"\n}"
+								},
+								"url": {
+									"raw": "http://xdevicesdev.home:8000/api/register/sensors/",
+									"protocol": "http",
+									"host": [
+										"xdevicesdev",
+										"home"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"register",
+										"sensors",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update sensor",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"id\": 1,\n        \"version\": 1,\n        \"name\": \"dummy sensor - update\",\n        \"uuid\": \"81750491-88dd-410e-b53f-1666786cd721\",\n        \"type\": \"TEMPERATURE\",\n        \"description\": \"dummy sensor description\",\n        \"attributes\": [\n            {\n                \"id\": 1,\n                \"version\": 1,\n                \"symbol\": \"ACTIVE\",\n                \"value\": true,\n                \"sensor_id\": 1\n            }\n        ]\n    }"
+								},
+								"url": {
+									"raw": "http://xdevicesdev.home:8000/api/register/sensors/81750491-88dd-410e-b53f-1666786cd721",
+									"protocol": "http",
+									"host": [
+										"xdevicesdev",
+										"home"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"register",
+										"sensors",
+										"81750491-88dd-410e-b53f-1666786cd721"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete sensor",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://xdevicesdev.home:8000/api/register/sensors/81750491-88dd-410e-b53f-1666786cd721",
+									"protocol": "http",
+									"host": [
+										"xdevicesdev",
+										"home"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"register",
+										"sensors",
+										"81750491-88dd-410e-b53f-1666786cd721"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		}
+	]
+}
