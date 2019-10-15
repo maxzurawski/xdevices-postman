@@ -35,6 +35,34 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "eureka apps",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://xdevicesdev.home:8761/eureka/apps/proxy",
+							"protocol": "http",
+							"host": [
+								"xdevicesdev",
+								"home"
+							],
+							"port": "8761",
+							"path": [
+								"eureka",
+								"apps",
+								"proxy"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -400,6 +428,39 @@
 							"response": []
 						},
 						{
+							"name": "save sensor of another type",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\":\"dummy sensor\",\n\t\"description\":\"dummy sensor description\",\n\t\"type\":\"TEMPERATURE\",\n\t\"uuid\": \"81750491-88dd-410e-b53f-1666786cd721\"\n}"
+								},
+								"url": {
+									"raw": "http://xdevicesdev.home:8000/api/register/sensors/",
+									"protocol": "http",
+									"host": [
+										"xdevicesdev",
+										"home"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"register",
+										"sensors",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
 							"name": "update sensor",
 							"request": {
 								"method": "PUT",
@@ -465,6 +526,34 @@
 					"_postman_isSubFolder": true
 				}
 			]
+		},
+		{
+			"name": "servicesresolver",
+			"item": [
+				{
+					"name": "Get application metadata",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://xdevicesdev.home:8000/api/servicesresolver/proxy",
+							"protocol": "http",
+							"host": [
+								"xdevicesdev",
+								"home"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"servicesresolver",
+								"proxy"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
 		}
 	]
 }
