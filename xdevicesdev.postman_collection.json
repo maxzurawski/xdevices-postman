@@ -554,6 +554,58 @@
 				}
 			],
 			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "constantsprovider",
+			"item": [
+				{
+					"name": "topics",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://xdevicesdev.home:8000/api/constantsprovider/topics/",
+							"protocol": "http",
+							"host": [
+								"xdevicesdev",
+								"home"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"constantsprovider",
+								"topics",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "routingkeys",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://xdevicesdev.home:8000/api/constantsprovider/routingkeys/",
+							"protocol": "http",
+							"host": [
+								"xdevicesdev",
+								"home"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"constantsprovider",
+								"routingkeys",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
 		}
 	]
 }
